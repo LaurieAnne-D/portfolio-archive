@@ -16,6 +16,10 @@ body {
     font-family: montserrat, sans-serif;
 }
 
+main {
+    margin: 0 10px;
+}
+
 
 p {
     margin: 0;
@@ -129,9 +133,9 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
         gap: 10px;
         text-align: center;
-        padding: 10px;
         padding-top: 40px;
 
         .intro {
@@ -159,23 +163,65 @@ main {
         img {
             width: 305px;
             height: 305px;
-            border-radius: 20px;
-            box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+            border-radius: 100%;
+            border: #8fb1be 1px solid;
         }
 
         .about {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            margin: 5px 25px;
+            margin: 5px 10px;
             text-align: start;
             line-height: 1rem;
 
-            .fa-droplet {
+            .fa-droplet,
+            .fa-anchor {
                 display: inline-block;
-                transform: rotate(60deg);
                 max-width: fit-content;
                 margin-right: 10px;
+            }
+        }
+    }
+
+    .skills {
+        display: flex;
+        margin-top: 40px;
+        background:
+            linear-gradient(to right, var(--primary-color), var(--secondary-color)) 0 0/100% 20% no-repeat,
+            linear-gradient(to right, var(--third-color), var(--fourth-color)) 0 20%/100% 20% no-repeat,
+            linear-gradient(to right, var(--fifth-color), var(--sixth-color)) 0 40%/100% 20% no-repeat;
+        background-color: #fff;
+        /* Fallback color */
+
+        ul {
+            display: flex;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+
+            li {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                font-size: 1.2rem;
+
+                i {
+                    font-size: 35px;
+                    color: var(--third-color);
+                    cursor: pointer;
+                }
+
+                .fa-circle-xmark {
+                    position: absolute;
+                    right: 12px;
+                    font-size: 1.6rem;
+                    top: 21px;
+                    display: none;
+                }
             }
         }
     }
@@ -185,13 +231,25 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 40px;
         gap: 10px;
 
         ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
 
             li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
                 img {
-                    width: 335px;
+                    width: calc(100% - 20px);
                     height: 355px;
                     border-radius: 20px;
                 }

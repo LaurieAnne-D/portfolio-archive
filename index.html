@@ -8,22 +8,84 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Limelight&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ccc2c9f9ad.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
+    <nav>
+        <figure>
+            <img src="./assets/logo/3.svg" alt="logo">
 
-    </header>
+            <figcaption>
+                <i class="clickable fa-solid fa-water"></i>
+            </figcaption>
+        </figure>
+
+        <div class="navLinks-ctn">
+            <ul class="navLinks">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main>
-     
+        <header>
+            <figure>
+                <figcaption class="intro">
+                    <p>Bonjour, je suis Laurie-Anne,</p>
+                    <p>developpeuse <span>front-end</span></p>
+                </figcaption>
+                <img src="/assets/images/loune2.png" alt="">
+            </figure>
+
+            <section class="about">
+                <p>
+                    <i class="fa-solid fa-droplet"></i>
+                    Je me spécialise dans le développement front-end, créant des interfaces intuitives et esthétiques.
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-droplet"></i>
+                    J'ai débuté en
+                    autodidacte avant de renforcer mes compétences avec une formation chez OpenClassrooms.
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-droplet"></i>
+                    Toujours prête pour de nouveaux projets et collaborations créatives. Consultez mon
+                    portfolio et contactez-moi pour discuter !
+                </p>
+            </section>
+
+        </header>
+
+        <section id="projects" class="projects">
+            <h1>Projets</h1>
+            <ul class="projectsCtn">
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <a class="button" href="mailto:lau.dore@gmail.com">Me contacter</a>
+        </section>
     </main>
+
     <footer>
-       
+        <p>Laurie-Anne Doré</p>
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        </ul>
     </footer>
-    <script src="./assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>

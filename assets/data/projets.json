@@ -1,0 +1,93 @@
+[
+    {
+        "title": "Booki",
+        "cover": "assets/images/booki.png",
+        "description": "Cet outil permet de trouver des logements et des activités qui correspondent aux besoins de l'utilisateur.",
+        "url": "https://laurieanne-doré.github.io/Booki/",
+        "languages": [
+            "HTML",
+            "CSS"
+        ],
+        "services": [
+            "Responsive design"
+        ]
+    },
+
+    {
+        "title": "Ohmyfood",
+        "cover": "assets/images/ohmyfood.png",
+        "description": "Cette application permet de trouver des restaurants et des menus qui correspondent aux besoins de l'utilisateur.",
+        "url": "https://laurieanne-doré.github.io/ohmyfood/",
+        "languages": [
+            "HTML",
+            "Sass"
+        ],
+        "infos": [
+            "Responsive design",
+            "Animations CSS"
+        ]
+    },
+
+    {
+        "id": "",
+        "title": "Print it",
+        "cover": "assets/images/printit.png",
+        "description": "Cet outil permet de trouver des logements qui correspondent aux besoins de l'utilisateur.",
+        "url": "https://laurieanne-doré.github.io/PrintIt/",
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "infos": [
+            "Animations CSS"
+        ]
+    },
+
+    {
+        "title": "Sophie Bluel",
+        "cover": "assets/images/sophieb.png",
+        "description": "portfolio de photographe",
+        "url": "https://laurieanne-doré.github.io/sophie-bluel/",
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "infos": [
+            "Responsive design",
+            "Animations CSS"
+        ]
+    },
+
+    {
+        "title": "Qwenta",
+        "cover": "assets/images/qwenta.png",
+        "description": "Cette application permet de trouver des restaurants et des menus qui correspondent aux besoins de l'utilisateur.",
+        "url": "https://laurieanne-doré.github.io/ohmyfood/",
+        "infos": [
+            "Figma",
+            "Trello",
+            "Notion",
+            "canva",
+            "Feedly"
+        ]
+    },
+
+    {
+        "title": "Kasa",
+        "cover": "assets/images/kasa.png",
+        "description": "Cet outil permet de trouver des logements qui correspondent aux besoins de l'utilisateur.",
+        "url": "https://laurieanne-doré.github.io/Kasa/",
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "infos": [
+            "React",
+            "Responsive design",
+            "Animations CSS"
+        ]
+    }
+]

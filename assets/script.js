@@ -24,7 +24,7 @@ const clickableElement = document.querySelector('.clickable');
 clickableElement.addEventListener('click', handleClick);
 
 // Utilisation de fetch pour charger le fichier JSON
-fetch('assets/data/projets.json')
+fetch('assets/projets.json')
     .then(response => response.json())
     .then(projets => {
         console.log(projets);

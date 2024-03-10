@@ -44,3 +44,13 @@ fetch('assets/projets.json')
     .catch(error => {
         console.error('Une erreur s\'est produite lors du chargement du fichier JSON :', error);
     });
+
+// Sélection de l'élément de contenu
+const skillsCtn = document.querySelector(".skills");
+const skillsCtnt = document.querySelector('.iconsCtn');
+
+// Clonage du contenu
+var clone = skillsCtnt.cloneNode(true);
+
+// Ajout du clone au conteneur
+skillsCtn.appendChild(clone);

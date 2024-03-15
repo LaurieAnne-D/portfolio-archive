@@ -2,21 +2,28 @@
     {
         "title": "Booki",
         "cover": "assets/images/booki.png",
-        "description": "Cet outil permet de trouver des logements et des activités qui correspondent aux besoins de l'utilisateur.",
+        "description": [
+            "Client : Entreprise souhaitant développer un site web pour la recherche d'hébergements et d'activités.",
+            "Présentation : Booki est un projet web qui vise à simplifier la recherche d'hébergements et d'activités dans la ville de choix de l'utilisateur. Mon rôle en tant que développeuse Front-End était de prendre les maquettes fournies par l'UI designer, et de les intégrer en utilisant HTML et CSS.",
+            "Objectifs : Le principal défi était de rendre le projet compatible avec diverses tailles d'écran tout en respectant les spécifications de conception. J'ai utilisé flexbox pour créer une mise en page adaptable, garantissant ainsi une expérience utilisateur uniforme sur tous les appareils. J'ai travaillé en étroite collaboration avec les concepteurs pour intégrer harmonieusement les éléments visuels dans la mise en page, assurant ainsi une présentation esthétique et fonctionnelle sur les écrans larges de bureau, les tablettes et les smartphones."
+        ],
         "url": "https://laurieanne-doré.github.io/Booki/",
         "languages": [
             "HTML",
             "CSS"
         ],
-        "services": [
+        "infos": [
             "Responsive design"
         ]
     },
-
     {
         "title": "Ohmyfood",
         "cover": "assets/images/ohmyfood.png",
-        "description": "Cette application permet de trouver des restaurants et des menus qui correspondent aux besoins de l'utilisateur.",
+        "description": [
+            "Client : Startup de restauration.",
+            "Présentation : OhMyFood est une startup de restauration qui souhaite développer un site répertoriant les menus de restaurants gastronomiques. Mon rôle en tant que développeuse était de créer le site en respectant les maquettes fournies par l'équipe UX designer.",
+            "Objectifs : Le projet a été conçu en adoptant une approche 'mobile first', ce qui signifie que j'ai priorisé l'optimisation de l'expérience utilisateur sur les appareils mobiles. Cette stratégie garantit que les utilisateurs bénéficient d'une expérience fluide et réactive, quel que soit l'appareil qu'ils utilisent, allant des smartphones aux ordinateurs de bureau. De plus, pour rendre le site encore plus attrayant, j'ai intégré des animations fluides et naturelles. Ces animations ont été soigneusement créées pour améliorer l'interactivité du site, offrant ainsi aux visiteurs une expérience engageante et immersive."
+        ],
         "url": "https://laurieanne-doré.github.io/ohmyfood/",
         "languages": [
             "HTML",
@@ -27,7 +34,6 @@
             "Animations CSS"
         ]
     },
-
     {
         "id": "",
         "title": "Print it",
@@ -43,11 +49,14 @@
             "Animations CSS"
         ]
     },
-
     {
         "title": "Sophie Bluel",
         "cover": "assets/images/sophieb.png",
-        "description": "portfolio de photographe",
+        "description": [
+            "Client : Agence ArchiWebos",
+            "Présentation : En tant que développeuse front-end, j'ai aidé une équipe à finaliser le nouveau site internet d'une architecte d'intérieur. J'étais chargée de développer plusieurs fonctionnalités clés pour le site.",
+            "Objectifs : Mon rôle a inclus la création de la page de présentation des travaux de l'architecte, avec des options de filtrage par catégorie, le développement de la page de connexion sécurisée de l'administrateur en utilisant JWT (JSON Web Tokens) pour l'authentification, ainsi que la conception d'une modale permettant à l'architecte d'ajouter ou de supprimer des projets. J'ai utilisé JavaScript pour générer dynamiquement les éléments en communiquant avec une API, ce qui a permis de récupérer, ajouter et supprimer des travaux. Tout au long du projet, nous avons utilisé un tableau Kanban détaillé pour organiser notre travail de manière efficace."
+        ],
         "url": "https://laurieanne-doré.github.io/sophie-bluel/",
         "languages": [
             "HTML",
@@ -59,7 +68,6 @@
             "Animations CSS"
         ]
     },
-
     {
         "title": "Qwenta",
         "cover": "assets/images/qwenta.png",
@@ -73,11 +81,15 @@
             "Feedly"
         ]
     },
-
     {
         "title": "Kasa",
         "cover": "assets/images/kasa.png",
-        "description": "Cet outil permet de trouver des logements qui correspondent aux besoins de l'utilisateur.",
+        "description": [
+            "startup spécialisée dans la location d'appartements entre particuliers.",
+            "Client : startup spécialisée dans la location d'appartements entre particuliers.",
+            "Présentation : J'ai travaillé en tant que développeuse front-end sur le projet Kasa, pour une refonte totale du site, incluant une transition de ASP.NET à une stack Javascript moderne. Mon rôle était de concevoir une plateforme web en utilisant React pour le côté front-end, et Node.js pour le côté backend, ainsi que des maquettes fournies par le designer.",
+            "Objectifs : L'objectif était de moderniser la plateforme existante, en React, pour optimiser l'expérience utilisateur sur différentes tailles d'écran. J'ai enrichi l'interactivité du site en intégrant des animations CSS tout en introduisant des éléments avancés, comme la création d'un carrousel pour afficher les images des logements, l'implémentation d'un collapse pour améliorer l'UX, et la gestion dynamique des fiches logements à partir de données internes. De plus, j'ai utilisé Sass pour améliorer la gestion des styles."
+        ],
         "url": "https://laurieanne-doré.github.io/Kasa/",
         "languages": [
             "HTML",

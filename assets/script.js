@@ -37,8 +37,41 @@ fetch('assets/projets.json')
             li.id = projet.title;
             coverImg.src = projet.cover;
 
-            projetContainer.appendChild(li);
+            const projectInfo = document.createElement("div");
+            projectInfo.classList.add("projectInfo");
+            const title = document.createElement("p");
+            title.textContent = projet.title;
+            projectInfo.appendChild(title);
+
+            if (projet.languages) {
+                projet.languages.forEach(langage => {
+                    const langageP = document.createElement("p");
+                    langageP.textContent = ` ${langage}`;
+                    projectInfo.appendChild(langageP);
+                });
+            } else {
+                const langageP = document.createElement("p");
+                langageP.textContent = "Language: N/A";
+                projectInfo.appendChild(langageP);
+            }
+
+            if (projet.infos) {
+                projet.infos.forEach(info => {
+                    const infoP = document.createElement("p");
+                    infoP.textContent = ` ${info}`;
+                    projectInfo.appendChild(infoP);
+                });
+            } else {
+                const infoP = document.createElement("p");
+                infoP.textContent = "Service: N/A";
+                projectInfo.appendChild(infoP);
+            }
+
+
             li.appendChild(coverImg);
+            li.appendChild(projectInfo);
+
+            projetContainer.appendChild(li);
         }
     })
     .catch(error => {

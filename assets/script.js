@@ -1,29 +1,33 @@
 "use strict";
+
 const nav = document.querySelector(".navLinks-ctn");
+const clickableElement = document.querySelector('.clickable');
 
-
-
-// Gestionnaire d'événements de clic
 function handleClick() {
-    const clickableElement = document.querySelector('.clickable');
     if (clickableElement.classList.contains('fa-water')) {
         clickableElement.classList.remove('fa-ellipsis-vertical');
         clickableElement.classList.toggle('fa-xmark');
         nav.classList.toggle('navplay');
-    }
-    else if (clickableElement.classList.contains('fa-xmark')) {
+    } else if (clickableElement.classList.contains('fa-xmark')) {
         clickableElement.classList.remove('fa-xmark');
         clickableElement.classList.toggle('fa-water');
         nav.classList.toggle('navplay');
     }
-
 }
 
-// Sélection de l'élément <i> et ajout du gestionnaire d'événements de clic
-const clickableElement = document.querySelector('.clickable');
 clickableElement.addEventListener('click', handleClick);
 
-// Utilisation de fetch pour charger le fichier JSON
+function skillsCtn() {
+    const skillsCtn = document.querySelector(".skills");
+    const skillsCtnt = document.querySelector('.iconsCtn');
+    let clone = skillsCtnt.cloneNode(true);
+
+    skillsCtn.appendChild(clone);
+}
+
+skillsCtn();
+
+
 fetch('assets/projets.json')
     .then(response => response.json())
     .then(projets => {
@@ -33,15 +37,18 @@ fetch('assets/projets.json')
         for (const projet of projets) {
             const li = document.createElement("li");
             const coverImg = document.createElement("img");
+            const projectInfo = document.createElement("div");
+            const infoIcon = document.createElement("i");
 
-            li.id = projet.title;
+            const descriptionModal = projet.description;
+            const projetTitle = projet.title;
+
+            li.id = projetTitle;
             coverImg.src = projet.cover;
 
-            const projectInfo = document.createElement("div");
             projectInfo.classList.add("projectInfo");
-            const title = document.createElement("p");
-            title.textContent = projet.title;
-            projectInfo.appendChild(title);
+            infoIcon.classList.add("fa-solid", "fa-circle-plus");
+
 
             if (projet.languages) {
                 projet.languages.forEach(langage => {
@@ -49,10 +56,6 @@ fetch('assets/projets.json')
                     langageP.textContent = ` ${langage}`;
                     projectInfo.appendChild(langageP);
                 });
-            } else {
-                const langageP = document.createElement("p");
-                langageP.textContent = "Language: N/A";
-                projectInfo.appendChild(langageP);
             }
 
             if (projet.infos) {
@@ -61,29 +64,57 @@ fetch('assets/projets.json')
                     infoP.textContent = ` ${info}`;
                     projectInfo.appendChild(infoP);
                 });
-            } else {
-                const infoP = document.createElement("p");
-                infoP.textContent = "Service: N/A";
-                projectInfo.appendChild(infoP);
             }
-
 
             li.appendChild(coverImg);
             li.appendChild(projectInfo);
-
+            projectInfo.appendChild(infoIcon);
             projetContainer.appendChild(li);
+
+            infoIcon.addEventListener('click', function () {
+                openModal(projetTitle, descriptionModal);
+            });
         }
     })
     .catch(error => {
         console.error('Une erreur s\'est produite lors du chargement du fichier JSON :', error);
     });
 
-// Sélection de l'élément de contenu
-const skillsCtn = document.querySelector(".skills");
-const skillsCtnt = document.querySelector('.iconsCtn');
+function openModal(title, description) {
+    const modalCtn = document.querySelector(".main");
+    const modal = document.createElement("div");
+    const transparent = document.createElement("div");
+    const modalContent = document.createElement("section");
+    const modalHeader = document.createElement("header");
+    const modalTitle = document.createElement("h1")
+    const modalIcon = document.createElement("i");
+    const modalDescription = document.createElement("p")
 
-// Clonage du contenu
-var clone = skillsCtnt.cloneNode(true);
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
 
-// Ajout du clone au conteneur
-skillsCtn.appendChild(clone);
+    modal.classList.add("modal");
+    modal.classList.remove("modalNone");
+    transparent.classList.add("transparent");
+    modalContent.classList.add("modalContent");
+    modalHeader.classList.add("modalHeader");
+    modalIcon.classList.add("fa-solid", "fa-xmark");
+
+    modalCtn.insertBefore(modal, modalCtn.firstChild);
+    modal.appendChild(transparent);
+    modal.appendChild(modalContent);
+    modalContent.appendChild(modalHeader);
+    modalContent.appendChild(modalDescription);
+    modalHeader.appendChild(modalTitle);
+    modalHeader.appendChild(modalIcon);
+
+    modalIcon.addEventListener('click', function () {
+        closeModal();
+    })
+}
+
+function closeModal() {
+    const modal = document.querySelector(".modal");
+    modal.classList.remove("modal");
+    modal.classList.add("modalNone");
+}

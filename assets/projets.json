@@ -38,7 +38,7 @@
         "id": "",
         "title": "Print it",
         "cover": "assets/images/printit.png",
-        "description": "Cet outil permet de trouver des logements qui correspondent aux besoins de l'utilisateur.",
+        "description": ["Cet outil permet de trouver des logements qui correspondent aux besoins de l'utilisateur."],
         "url": "https://laurieanne-doré.github.io/PrintIt/",
         "languages": [
             "HTML",
@@ -71,7 +71,7 @@
     {
         "title": "Qwenta",
         "cover": "assets/images/qwenta.png",
-        "description": "Cette application permet de trouver des restaurants et des menus qui correspondent aux besoins de l'utilisateur.",
+        "description": ["Cette application permet de trouver des restaurants et des menus qui correspondent aux besoins de l'utilisateur."],
         "url": "https://laurieanne-doré.github.io/ohmyfood/",
         "infos": [
             "Figma",

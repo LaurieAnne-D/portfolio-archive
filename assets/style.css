@@ -215,7 +215,9 @@ main {
         justify-content: center;
         align-items: center;
         width: calc(100% - 20px);
+        max-width: 398px;
         text-align: center;
+
 
         h2 {
             padding: 5px 0;
@@ -302,7 +304,7 @@ main {
 
     ul {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -510,15 +512,12 @@ footer {
 
 @media screen and (min-width: 768px) {
     main {
-        .skills-ctn {
-            width: 375px;
-        }
-
         .projects {
 
             ul {
-                flex-direction: row-reverse;
+                flex-direction: row;
                 flex-wrap: wrap;
+                list-style-type: none;
 
                 li {
                     width: auto;

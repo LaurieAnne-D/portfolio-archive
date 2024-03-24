@@ -86,7 +86,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1000;
-    border-bottom: var(--secondary-color) 1px solid;
+    border-bottom: #1c1531 1px solid;
 
     figure {
         display: flex;

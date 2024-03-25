@@ -89,6 +89,7 @@ function openModal(title, description) {
     const modalTitle = document.createElement("h1")
     const modalIcon = document.createElement("i");
     const modalDescription = document.createElement("p")
+    const wave = document.querySelector(".fa-water");
 
     modalTitle.textContent = title;
     modalDescription.textContent = description;
@@ -109,6 +110,10 @@ function openModal(title, description) {
     modalHeader.appendChild(modalIcon);
 
     modalIcon.addEventListener('click', function () {
+        closeModal();
+    })
+
+    wave.addEventListener('click', function () {
         closeModal();
     })
 }

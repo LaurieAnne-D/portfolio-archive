@@ -314,10 +314,11 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
+            width: calc(100% - 20px);
+            border-radius: 20px;
 
             img {
-                width: calc(100% - 20px);
+                width: 100%;
                 height: 355px;
                 border-radius: 20px;
             }
@@ -350,13 +351,17 @@ main {
             }
         }
 
+        li:hover,
+        li:focus {
+            border: 1px solid #fafbdc;
+        }
+
         li:hover .projectInfo p,
         li:focus .projectInfo p {
             display: block;
         }
 
         li:hover img {
-            border: var(--secondary-color) 2px solid;
             filter: brightness(50%);
         }
 
@@ -527,11 +532,11 @@ footer {
 
         .modal {
             .transparent {
-                width: 50%;
+                width: 30%;
             }
 
             .modalContent {
-                width: 50%;
+                width: 70%;
             }
         }
     }

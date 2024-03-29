@@ -379,22 +379,17 @@ main {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(250, 251, 220, 0.5);
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     z-index: 999;
-
-    .transparent {
-        width: 20%;
-        height: 100%;
-        background-color: var(--secondary-color);
-        opacity: 0.5;
-    }
+    overflow-y: auto;
 
     .modalContent {
-        width: 80%;
-        height: 100%;
+        width: 85%;
+        max-height: 90%;
+        overflow-y: auto;
         background-color: var(--primary-color);
         border-left: var(--secondary-color) 1px solid;
         padding: 20px;
@@ -412,9 +407,12 @@ main {
                 color: var(--third-color);
                 cursor: pointer;
             }
-
         }
     }
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 

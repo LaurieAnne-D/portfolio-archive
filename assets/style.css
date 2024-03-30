@@ -408,6 +408,10 @@ main {
                 cursor: pointer;
             }
         }
+
+        img {
+            width: 100%;
+        }
     }
 }
 

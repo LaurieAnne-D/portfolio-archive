@@ -61,7 +61,7 @@
     {
         "title": "Sophie Bluel",
         "cover": "assets/images/sophieb.png",
-        "demo": "assets/videos/kasademo.gif",
+        "demo": "assets/videos/sblueldemo.gif",
         "description": [
             {
                 "title": "Portfolio d'une photographe.",
@@ -91,7 +91,7 @@
     {
         "title": "Print it",
         "cover": "assets/images/printit.png",
-        "demo": "assets/videos/kasademo.gif",
+        "demo": "assets/videos/printitdemo.gif",
         "description": [
             {
                 "title": "Modernisation d'un site web d'imprimerie avec JavaScript.",
@@ -115,7 +115,7 @@
     {
         "title": "Ohmyfood",
         "cover": "assets/images/ohmyfood.png",
-        "demo": "assets/videos/kasademo.gif",
+        "demo": "assets/videos/ohmyfooddemo.gif",
         "description": [
             {
                 "title": "Startup de restauration.",
@@ -144,7 +144,7 @@
     {
         "title": "Booki",
         "cover": "assets/images/booki.png",
-        "demo": "assets/videos/kasademo.gif",
+        "demo": "assets/videos/bookidemo.gif",
         "description": [
             {
                 "title": "Entreprise souhaitant développer un site web pour la recherche d'hébergements et d'activités.",

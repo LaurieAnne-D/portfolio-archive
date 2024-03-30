@@ -72,7 +72,7 @@ fetch('assets/projets.json')
             projetContainer.appendChild(li);
 
             infoIcon.addEventListener('click', function () {
-                openModal(projetTitle, descriptionModal, projet.url, projet.infos, projet.languages);
+                openModal(projetTitle, descriptionModal, projet.url, projet.infos, projet.languages, projet.demo,);
             });
 
         }
@@ -81,7 +81,7 @@ fetch('assets/projets.json')
         console.error('Une erreur s\'est produite lors du chargement du fichier JSON :', error);
     });
 
-function openModal(title, descriptions, urls, infos, languages) {
+function openModal(title, descriptions, urls, infos, languages, demo) {
     const modalCtn = document.querySelector(".main");
     const modal = document.createElement("div");
     const modalContent = document.createElement("section");
@@ -104,6 +104,7 @@ function openModal(title, descriptions, urls, infos, languages) {
     modalHeader.appendChild(modalTitle);
     modalHeader.appendChild(modalIcon);
 
+    displayDemo(modalContent, demo);
     displayDescriptions(modalContent, descriptions);
     displayURLs(modalContent, urls);
     displayInfos(modalContent, infos);
@@ -113,6 +114,13 @@ function openModal(title, descriptions, urls, infos, languages) {
     wave.addEventListener('click', closeModal);
 
     document.body.classList.add('modal-open');
+}
+
+function displayDemo(container, demo) {
+    if (!demo) return;
+    const demoImg = document.createElement("img");
+    demoImg.src = demo;
+    container.appendChild(demoImg);
 }
 
 

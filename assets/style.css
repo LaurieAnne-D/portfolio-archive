@@ -43,7 +43,7 @@ main {
 p {
 margin: 0;
     font-family: var(--secondary-font);
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 300;
     letter-spacing: 1px;
     word-spacing: 1.5px;
@@ -183,10 +183,13 @@ main {
             flex-direction: column;
             gap: 5px;
             margin-bottom: 20px;
+            margin-top: 20px;
 
             p {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 font-weight: 300;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
 
                 span {
                     font-size: 1.5rem;
@@ -211,7 +214,6 @@ main {
             gap: 10px;
             margin: 5px 10px;
             text-align: start;
-            line-height: 1rem;
         }
     }
 

@@ -143,7 +143,8 @@ function displayDescriptions(container, descriptions) {
 
             container.appendChild(descCtn);
             descCtn.appendChild(createAndAppendElement("h2", title));
-            descCtn.appendChild(createAndAppendElement("p", client));
+            descCtn.appendChild(createAndAppendElement("p", client)).classList.add("client");
+
 
             for (const [title, detail] of Object.entries(details)) {
                 const detailsCtn = document.createElement("section");

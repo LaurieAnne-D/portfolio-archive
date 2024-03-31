@@ -124,34 +124,54 @@ function displayDemo(container, demo) {
 }
 
 
+// Fonction pour créer un élément HTML avec du texte et l'ajouter à un conteneur
+function createAndAppendElement(element, text) {
+    const el = document.createElement(element);
+    el.textContent = text;
+    return el;
+}
+
+// Fonction principale pour afficher les descriptions dans un conteneur
 function displayDescriptions(container, descriptions) {
-    descriptions.forEach(desc => {
-        if (Array.isArray(desc)) {
-            const descTitle = document.createElement("h2");
-            descTitle.textContent = "Description";
-            container.appendChild(descTitle);
-            desc.forEach(item => {
-                const descP = document.createElement("p");
-                descP.textContent = item;
-                container.appendChild(descP);
-            });
-        } else if (typeof desc === 'object' && desc.title && desc.details) {
-            const descTitle = document.createElement("h2");
-            descTitle.textContent = desc.title;
-            container.appendChild(descTitle);
-            for (const [title, detail] of Object.entries(desc.details)) {
-                const titleHeader = document.createElement("h3");
-                titleHeader.textContent = title;
+    for (const desc of descriptions) {
+        if (typeof desc === 'object' && desc.title && desc.client && desc.details) {
+            // Traiter une description sous forme d'objet
+            const { title, client, details } = desc;
+            const descCtn = document.createElement("section");
+
+            descCtn.classList.add("mission");
+
+            container.appendChild(descCtn);
+            descCtn.appendChild(createAndAppendElement("h2", title));
+            descCtn.appendChild(createAndAppendElement("p", client));
+
+            for (const [title, detail] of Object.entries(details)) {
+                const detailsCtn = document.createElement("section");
+                const detailTitle = document.createElement("h3");
                 const detailP = document.createElement("p");
+
+                detailTitle.textContent = title;
                 detailP.textContent = detail;
-                container.appendChild(titleHeader);
-                container.appendChild(detailP);
+
+                detailsCtn.appendChild(detailTitle);
+                detailsCtn.appendChild(detailP);
+                descCtn.appendChild(detailsCtn);
+
+                if (title === "Présentation") {
+                    detailsCtn.classList.add("presentation");
+                }
+
+                if (title === "Objectifs") {
+                    detailsCtn.classList.add("objectifs");
+                }
             }
         } else {
             console.error('Description format not recognized:', desc);
         }
-    });
+    }
 }
+
+
 
 function displayURLs(container, urls) {
     if (!urls) return;
